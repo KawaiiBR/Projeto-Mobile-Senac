@@ -6,7 +6,7 @@
         <StackLayout>
             <Button Text="+"
                     Margin="325,0,0,1"/>
-            <Image Source="cachorro_quente.png"
+            <Image Source="cachorro_quente.png" 
                    Scale="3"
                    Margin="0,50,0,0"/>
             <Button Text="Cachorros Quentes"
