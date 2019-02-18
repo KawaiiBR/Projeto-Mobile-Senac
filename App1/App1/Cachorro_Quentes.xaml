@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Cachorro_Quentes">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="HotDog_Simples"/>
+            <Button Text="DOG SIMPLES"
+                    Margin="162,0,0,0"/>
+            <Label Text="- Tomates picados ao azeite"
+                   Margin="162,0,0,0"/>
+            <Label Text="- Purê de batatas- Milho"
+                   Margin="162,0,0,0"/>
+            <Label Text="- Azeitonas pretas fatiadas"
+                   Margin="162,0,0,0"/>
+            <Label Text="- Queijo parmesão ralado em fios"
+                   Margin="162,0,0,0"/>
+            <Label Text=" R$ 16,90"
+                   Margin="162,0,0,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
