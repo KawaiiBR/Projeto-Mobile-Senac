@@ -2,30 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App1"
-             x:Class="App1.MainPage">
+             x:Class="App1.MainPage"
+             BackgroundColor="DarkRed">
 
     <StackLayout>
 
-        <Entry Text="Email" 
+        <Entry Placeholder="Email" 
            HorizontalTextAlignment="Center"
            VerticalOptions="Center"
            Margin="20,250,20,20"
            x:Name="entryEmail"/>
-        <Entry Text="Senha"
+        <Entry Placeholder="Senha"
+               IsPassword="True"
                HorizontalTextAlignment="Center"
                Margin="20,0,20,0"
                x:Name="entrySenha"/>
         <Button Text="Esqueci minha senha"
                HorizontalOptions="EndAndExpand"
                Margin="0,0,20,0"
-               x:Name="buttonEsqueciSenha"/>
+               x:Name="buttonEsqueciSenha"
+                Clicked="ButtonEsqueciSenha_Clicked"/>
         <StackLayout Orientation="Horizontal">
             <Button Text="Login"
                     HorizontalOptions="FillAndExpand"
-                    x:Name="buttonLogin"/>
+                    x:Name="buttonLogin"
+                    Clicked="ButtonLogin_Clicked"
+                    Margin="10,0,10,0"/>
             <Button Text="Cadastrar-se"
                     HorizontalOptions="FillAndExpand"
-                    x:Name="buttonCadastrar"/>
+                    x:Name="buttonCadastrar"
+                    Clicked="ButtonCadastrar_Clicked"
+                    Margin="10,0,10,0"/>
         </StackLayout>
 
     </StackLayout>

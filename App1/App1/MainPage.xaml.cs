@@ -13,5 +13,36 @@ namespace App1
         {
             InitializeComponent();
         }
+
+        private async void ButtonCadastrar_Clicked(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(entryEmail.Text) ||
+                string.IsNullOrEmpty(entrySenha.Text))
+            {
+                await DisplayAlert("Erro!", "Não deixe campos em branco", "OK");
+            }
+            else
+            {
+                if (entryEmail.Text == "admin" && entrySenha.Text == "admin")
+                {
+                    var page = new CadastrarEndereco();
+                    await Navigation.PushModalAsync(page);
+                }
+                else
+                {
+                    await DisplayAlert("Erro!", "Senha ou email incorreto", "OK");
+                }
+            }
+        }
+
+        private void ButtonLogin_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonEsqueciSenha_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

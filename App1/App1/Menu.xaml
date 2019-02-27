@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Menu"
+                  Title="Menu">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout>
+                <TableView>
+                    <TableSection>
+                        <ViewCell Tapped="ViewCell_Tapped">                            
+                            <Label Text="Sair da Conta"/>
+                        </ViewCell>
+                        <ViewCell>
+                            <Label Text="Trocar Endereco"/>
+                        </ViewCell>
+                    </TableSection>
+                </TableView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

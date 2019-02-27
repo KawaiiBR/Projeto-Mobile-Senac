@@ -1,13 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.CadastrarEndereco">
+             x:Class="App1.CadastrarEndereco"
+             BackgroundColor="DarkRed">
     <StackLayout>
-            <Entry Text="Endereço completo"
-                   Margin="20,250,20,0"/>
+        <Entry Placeholder="CEP"
+                   Margin="20,250,20,0"
+               x:Name="entryCEP"/>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Não sei meu CEP"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="20,0,0,0"
+                    x:Name="NaoSeiCEP"
+                    Clicked="NaoSeiCEP_Clicked"/>
             <Button Text="Cadastrar"
-                    HorizontalOptions="End"
-                    Margin="0,0,20,0"
-                    Padding="15"/>
+                        HorizontalOptions="End"
+                        Margin="0,0,20,0"
+                        Padding="15"
+                        x:Name="buttonCadastrar"
+                        Clicked="ButtonCadastrar_Clicked"/>
         </StackLayout>
+    </StackLayout>
 </ContentPage>

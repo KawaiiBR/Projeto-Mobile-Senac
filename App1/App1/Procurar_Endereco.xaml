@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Procurar_Endereco"
+             BackgroundColor="DarkRed">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Nº da casa*"
+                   Margin="10,10,10,0"
+                   x:Name="entryNumero"
+                   MaxLength="5"/>
+            <Entry Placeholder="Rua*"
+                   Margin="10,0,10,0"
+                   x:Name="entryRua"/>
+            <Entry Placeholder="Bairro*"
+                   Margin="10,0,10,0"
+                   x:Name="entryBairro"/>
+            <Entry Placeholder="Cidade*"
+                   Margin="10,0,10,0"
+                   x:Name="entryCidade"/>
+            <Entry Placeholder="Estado*"
+                   Margin="10,0,10,0"
+                   x:Name="entryEstado"/>
+            <Entry Placeholder="CEP - Se não souber, não coloque"
+                   Margin="10,0,10,0"
+                   x:Name="entryCEP"/>
+            <Label Text="Campos Obrigatórios*"
+                   Margin="15,0,0,0"
+                   Opacity="0.8"/>
+
+            <Button Text="Confirmar"
+                    HorizontalOptions="End"
+                    Padding="10"
+                    Margin="0,275,5,0"
+                    x:Name="buttonCorfirmar"
+                    Clicked="ButtonCorfirmar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
