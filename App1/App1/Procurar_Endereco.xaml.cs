@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SQLite;
+using System.Collections.ObjectModel;
 
 namespace App1
 {
@@ -13,13 +15,30 @@ namespace App1
 	public partial class Procurar_Endereco : ContentPage
 	{
         public static string _cep { get; set; } = "";
+        public static string _email { get; set; } = "";
+        public static string _senha { get; set; } = "";
+
+        private SQLiteAsyncConnection conexao;
+        private ObservableCollection<Usuarios> usuarios;
 
         public Procurar_Endereco()
 		{
 			InitializeComponent ();
             if(_cep != "")
                 CarregarEndereco();
+
+            conexao = DependencyService.Get<ISQLite>().AcessarDB();
+            conexao.CreateTableAsync<Usuarios>();
         }
+
+        protected async override void OnAppearing()
+        {
+            var lista = await conexao.Table<Usuarios>().ToListAsync();
+            usuarios = new ObservableCollection<Usuarios>(lista);
+
+            base.OnAppearing();
+        }
+
 
         public async void CarregarEndereco()
         {
@@ -51,6 +70,27 @@ namespace App1
             }
             else
             {
+                //Usuarios u = new Usuarios();
+                //u.ID = new Guid();
+                //u.Email = _email;
+                //u.Senha = _senha;
+
+                var u = new Usuarios
+                {
+                    ID = new Guid(),
+                    Email = _email,
+                    Senha = _senha,
+                    NumeroDaCasa = Convert.ToInt32(entryNumero.Text),
+                    Bairro = entryBairro.Text,
+                    Rua = entryRua.Text,
+                    Cidade = entryCidade.Text,
+                    Estado = entryEstado.Text,
+                    CEP = entryCEP.Text
+                };
+
+                conexao.InsertAsync(usuarios);
+                usuarios.Add(u);
+                DisplayAlert(null, "Gravado com sucesso!", "Ok");
                 var page = new Menu();
                 Navigation.PushModalAsync(page);
             }

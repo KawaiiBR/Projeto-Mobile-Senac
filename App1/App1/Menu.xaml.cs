@@ -20,7 +20,14 @@ namespace App1
 
         private void ViewCell_Tapped(object sender, EventArgs e)
         {
+            var page = new MainPage();
+            Navigation.PushModalAsync(page);
+        }
 
+        private void ViewCell_Tapped_1(object sender, EventArgs e)
+        {
+            var page = new CadastrarEndereco();
+            Navigation.PushModalAsync(page);
         }
     }
 }

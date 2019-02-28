@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.NaoAceitamosCartao"
+             BackgroundColor="DarkRed">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="- Tomates picados ao azeite
+                         
+                   
+                   - Purê de batatas
+                         
+                   
+                   
+                   
+                   - Milho
+                   
+                   
+                   
+                   
+                   - Azeitonas pretas fatiadas
+                   
+                   
+                   
+                   
+                   - Queijo parmesão ralado em fios"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   Margin="85,0,0,0"
+                   Scale="1.2"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Cancelar"
+                        HorizontalOptions="FillAndExpand"
+                        x:Name="buttonCancelar"
+                        Clicked="ButtonCancelar_Clicked"/>
+                <Button Text="Confirmar"
+                        HorizontalOptions="FillAndExpand"
+                        x:Name="buttonCorfirmar"
+                        Clicked="ButtonCorfirmar_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

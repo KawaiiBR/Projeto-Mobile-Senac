@@ -10,16 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace App1
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class EscolherTipoLanhe : ContentPage
+	public partial class ConfirmacaoDePedido : ContentPage
 	{
-		public EscolherTipoLanhe ()
+		public ConfirmacaoDePedido()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 		}
 
-        private void ButtonCQ_Clicked(object sender, EventArgs e)
+        private void ButtonConfirmar_Clicked(object sender, EventArgs e)
         {
-            var page = new Cachorro_Quentes();
+            var page = new NaoAceitamosCartao();
             Navigation.PushModalAsync(page);
         }
     }

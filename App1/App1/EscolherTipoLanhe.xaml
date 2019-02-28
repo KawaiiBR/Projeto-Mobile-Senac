@@ -9,7 +9,9 @@
                    Scale="3"
                    Margin="0,50,0,0"/>
             <Button Text="Cachorros Quentes"
-                    Margin="0,50,0,0"/>
+                    Margin="0,50,0,0"
+                    x:Name="buttonCQ"
+                    Clicked="ButtonCQ_Clicked"/>
             <Image Source="Lanche.png"
                    Scale="3"/>
             <Button Text="Lanches"

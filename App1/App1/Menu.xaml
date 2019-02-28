@@ -11,8 +11,11 @@
                         <ViewCell Tapped="ViewCell_Tapped">                            
                             <Label Text="Sair da Conta"/>
                         </ViewCell>
-                        <ViewCell>
+                        <ViewCell Tapped="ViewCell_Tapped_1">
                             <Label Text="Trocar Endereco"/>
+                        </ViewCell>
+                        <ViewCell>
+                            <Label Text="Meus Pedidos"/>
                         </ViewCell>
                     </TableSection>
                 </TableView>

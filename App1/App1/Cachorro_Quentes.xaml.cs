@@ -16,5 +16,11 @@ namespace App1
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void ButtonDogSimples_Clicked(object sender, EventArgs e)
+        {
+            var page = new ConfirmacaoDePedido();
+            Navigation.PushModalAsync(page);
+        }
+    }
 }

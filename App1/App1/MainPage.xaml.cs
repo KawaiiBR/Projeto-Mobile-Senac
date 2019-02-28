@@ -23,15 +23,10 @@ namespace App1
             }
             else
             {
-                if (entryEmail.Text == "admin" && entrySenha.Text == "admin")
-                {
+                    Procurar_Endereco._email = entryEmail.Text;
+                    Procurar_Endereco._senha = entrySenha.Text;
                     var page = new CadastrarEndereco();
                     await Navigation.PushModalAsync(page);
-                }
-                else
-                {
-                    await DisplayAlert("Erro!", "Senha ou email incorreto", "OK");
-                }
             }
         }
 
