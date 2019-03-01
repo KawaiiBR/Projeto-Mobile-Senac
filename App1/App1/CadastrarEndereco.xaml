@@ -6,7 +6,8 @@
     <StackLayout>
         <Entry Placeholder="CEP"
                    Margin="20,250,20,0"
-               x:Name="entryCEP"/>
+               x:Name="entryCEP"
+               Keyboard="Numeric"/>
         <StackLayout Orientation="Horizontal">
             <Button Text="Não sei meu CEP"
                     HorizontalOptions="FillAndExpand"

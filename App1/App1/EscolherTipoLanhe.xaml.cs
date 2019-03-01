@@ -19,6 +19,11 @@ namespace App1
 
         private void ButtonCQ_Clicked(object sender, EventArgs e)
         {
+            
+        }
+
+        private void ButtonCQ_Clicked_1(object sender, EventArgs e)
+        {
             var page = new Cachorro_Quentes();
             Navigation.PushModalAsync(page);
         }

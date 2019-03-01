@@ -8,7 +8,8 @@
             <Entry Placeholder="Nº da casa*"
                    Margin="10,10,10,0"
                    x:Name="entryNumero"
-                   MaxLength="5"/>
+                   MaxLength="5"
+                   Keyboard="Numeric"/>
             <Entry Placeholder="Rua*"
                    Margin="10,0,10,0"
                    x:Name="entryRua"/>
